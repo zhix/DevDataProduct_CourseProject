@@ -6,7 +6,7 @@ library(ggplot2)
 
 shinyServer(  
   function(input, output) {    
-    file <- 'C:/Users/User/Dropbox/Personal/Coursera/DataScience/9_DevelopingDataProducts/CourseProject/API_Banting.csv'
+    file <- 'API_Banting.csv'
     
     ## Load data from CSV file
     mydata <- read.csv(file)
