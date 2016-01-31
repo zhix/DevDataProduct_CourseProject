@@ -43,22 +43,7 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Read-And-Delete</h2>
-  </hgroup>
-  <article data-timings="">
-    <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
-</ol>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="class" id="id" style="background:;">
-  <hgroup>
-    <h2>Slide 2: Overview</h2>
+    <h2>Overview</h2>
   </hgroup>
   <article data-timings="">
     <p>The haze phenomenon has persistently return to Malaysia and Singapore on an annual basis over the past 3 decades. </p>
@@ -73,16 +58,16 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Slide 3: Application</h2>
+    <h2>Application</h2>
   </hgroup>
   <article data-timings="">
-    <p>Let us create a simple scatterplot.</p>
+    <p>To access the application created: </p>
 
-<pre><code class="r">require(ggplot2)
-qplot(wt, mpg, data = mtcars)
-</code></pre>
-
-<p><img src="assets/fig/simple-plot-1.png" title="plot of chunk simple-plot" alt="plot of chunk simple-plot" style="display: block; margin: auto;" /></p>
+<ol>
+<li><p>Open RStudio</p></li>
+<li><p>type &quot;runGist(&quot;ebbc4d8e682170ea66ef&quot;)&quot;</p></li>
+<li><p>Voila! You should be able to see the app. </p></li>
+</ol>
 
   </article>
   <!-- Presenter Notes -->
@@ -90,27 +75,36 @@ qplot(wt, mpg, data = mtcars)
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Slide 4</h2>
+    <h2>Functions</h2>
   </hgroup>
   <article data-timings="">
-    
+    <p>There are 4 options on Pollutants where user can choose any combination of them. The selected Pollutants are displayed before the graph is plotted. </p>
+
+<p>User could also choose to view the graph plot in particular year. </p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Slide 5</h2>
+    <h2>How it works?</h2>
   </hgroup>
   <article data-timings="">
-    
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+    <p>server.R</p>
 
-<slide class="class" id="id" style="background:;">
-  <article data-timings="">
-    
+<ul>
+<li><p>Graph is automatically updated by monitoring changes and 
+selection under the user inputs. </p></li>
+<li><p>When change is detected, the dataset is subsetted, and graph is plotted accordingly. </p></li>
+</ul>
+
+<p>ui.R</p>
+
+<ul>
+<li>interface is divided into 2 parts where one is for user to control the parameters (Year and Pollutant(s)), another is for plotting the Graph, as well as a brief description on the dataset. </li>
+</ul>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -121,38 +115,26 @@ qplot(wt, mpg, data = mtcars)
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Read-And-Delete'>
+        data-slide=1 title='Overview'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2: Overview'>
+        data-slide=2 title='Application'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Slide 3: Application'>
+        data-slide=3 title='Functions'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Slide 4'>
+        data-slide=4 title='How it works?'>
          4
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Slide 5'>
-         5
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='NA'>
-         6
       </a>
     </li>
   </ul>

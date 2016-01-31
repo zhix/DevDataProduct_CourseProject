@@ -11,15 +11,7 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-## Read-And-Delete
-
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
-
---- .class #id 
-
-## Slide 2: Overview
+## Overview
 The haze phenomenon has persistently return to Malaysia and Singapore on an annual basis over the past 3 decades. 
 
 This simple application was created to illustrate and analyse the Air Pollution Index (API) readings collected from 2013 to 2015 at the town Banting (near capital Kuala Lumpur) in Malaysia to examine the haze situation.
@@ -28,20 +20,36 @@ This was built as part of a deliverable for the course Developing Data Products 
 
 --- .class #id 
 
-## Slide 3: Application
-Let us create a simple scatterplot.
-<iframe src = 'http://dillinger.io' height='600px'></iframe>
 
+## Application
+
+To access the application created: 
+
+1. Open RStudio
+
+2. type "runGist("ebbc4d8e682170ea66ef")"
+
+3. Voila! You should be able to see the app. 
+
+
+--- .class #id
+
+## Functions
+There are 4 options on Pollutants where user can choose any combination of them. The selected Pollutants are displayed before the graph is plotted. 
+
+User could also choose to view the graph plot in particular year. 
 
 --- .class #id 
 
+## How it works?
 
+server.R
 
+- Graph is automatically updated by monitoring changes and 
+selection under the user inputs. 
 
-## Slide 4
+- When change is detected, the dataset is subsetted, and graph is plotted accordingly. 
 
---- .class #id 
+ui.R
 
-## Slide 5
-
---- .class #id 
+- interface is divided into 2 parts where one is for user to control the parameters (Year and Pollutant(s)), another is for plotting the Graph, as well as a brief description on the dataset. 
